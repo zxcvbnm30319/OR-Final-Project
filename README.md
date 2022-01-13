@@ -1,5 +1,21 @@
 # Multi-Objective Green Supply Chain Optimization
 
+
+## 編輯群 
+
+| 編輯者       |    學號       |  
+| :-----------:|:-----------: |  
+| 林昭廷       |   Q36101341  |  
+| 簡煒軒       |   Q36104234  |
+
+## Table of Contents
+- Background and Motivation
+- Green Supply Chain Model
+- Methodology
+- Analysis Result
+- Summary
+- Reference
+
 <h2>1. Background and Motivation </h2>
 
 ### 1.1 Background:
