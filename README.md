@@ -37,7 +37,7 @@ We assume **3 Manufacturers,4 Warehouses,5 Distribution centers,16 Customers**,b
 Notations of SCM
 The notations of SCM are as following table
 
-## Sets:
+### Sets:
 <table>
 <tr>
 <th>Set</th> <th>Description</th> 
@@ -72,10 +72,10 @@ The notations of SCM are as following table
 </table>
 
 -------------------------
-## Notation:
+### Notation:
 ![messageImage_1642046021182](https://user-images.githubusercontent.com/51538779/149263199-1be752bc-9c1e-4607-9b0d-f3399d45041f.jpg)
 
-## Parameter:
+### Parameter:
 <table>
  <tr><th>Parameter</th> <th>Description</th> </tr>
  <tr><th>dem<sub>c</sub> </th><th>demand of customer c with mean μc and standard deviation σc</th></tr>
@@ -103,7 +103,7 @@ The notations of SCM are as following table
  <tr><th>G<sup>f′</sup><sub>O</sub> </th><th>rate of released volatile organic per one unit of distance for transportation option f ′ ∈ {tm, tw, td}</th></tr>
  </table>
  
- ## Decision Variables:
+ ### Decision Variables:
  <table>
   <tr><th>Decision Variables</th><th>Description</th></tr>
   <tr><th>x<sub>m</sub> </th><th>1 if manufacturer m is opened  / 0 otherwise</th></tr>
@@ -116,7 +116,7 @@ The notations of SCM are as following table
  <tr><th>x<sup>j</sup><sub>m</sub></th><th>quantity of raw material transported to manufacturer m from supplier that produce raw material type j</th></tr>
  </table>
 
- ## Objective function:
+ ### Objective function:
  
 * **Objective function 1 --> Minimize cost:**
 
@@ -127,7 +127,7 @@ The notations of SCM are as following table
 ![2](https://user-images.githubusercontent.com/51538779/149276436-741e0180-dff0-423d-a26d-2e58a0c9fd0f.JPG)
 
 
- ## Constraints:
+ ### Constraints:
 
 (12)–(14) determine the demand of each facility:  
 ![12](https://user-images.githubusercontent.com/51538779/149278103-8afbba16-fee2-4f5d-9084-893b1614977a.JPG)
@@ -162,22 +162,30 @@ The notations of SCM are as following table
 
 <h2>3. Methodology </h2>
 
-## ϵ-constrained method
+### ϵ-constrained method
 We minimize two objectives by setting one objectives to the constraint.
 ![圖片5](https://user-images.githubusercontent.com/51538779/149279369-435e33c6-e036-4840-9c98-78bf93665b2b.png)  
 ![擷取000](https://user-images.githubusercontent.com/51538779/149279772-43b65175-1c24-4260-b3ae-a749ba645bb0.JPG)
 
-This is a **nonlinear problem** because  subtitute (17)(18) into (15)(16). We call a package from Python,called **"Pyomo"**.  
+This is a **nonlinear problem** because  subtitute (17)(18) into (15)(16). We call a module from Python,called **"Pyomo"**.  
 There is a solver **Ipopt**  can caculate continuous nonlinear problems.
 ![P](https://user-images.githubusercontent.com/51538779/149280809-0e37d5eb-edfd-4c01-a957-376020bc530c.JPG)
 
 
-<h2>4.Analysis Result </h2>
+<h2> 4.Analysis Result </h2>
+
+
+### 4.1 Analyze the different nubmber of manufacturer and distribution center
+Both the nubmber of manufacturer and distribution center increase,the cost and pollution are also increased in SCM.  
+However,the distribution center has many routes, when the number of distribution centers increases, the cost and pollution increase is larger than that of the manufacturer.
+![AAA1111](https://user-images.githubusercontent.com/51538779/149289120-21d00f06-8ddb-4ccc-a9ae-bb9e332dacf2.JPG)
 
 
 
+### 4.2 Analyze the different nubmber of customers
+The following pictures show that transportation cost account for large proportion in SCM.  
+If the customer number grow ,more products could not deliverd to customer in time so that the backorder cost increase. 
+![CCC](https://user-images.githubusercontent.com/51538779/149283068-6062660d-9672-4f6f-a503-cc8efca36d89.JPG)
 
-
-
-
+### 4.3 Analyze the different nubmber of customers
 
