@@ -11,7 +11,9 @@ The aim of most supply chain optimization problems is to minimize the total cost
 ### 1.3 Problem Definition:
 We want to **minimize the total cost** of the supply chain and **minimize the air pollution discharged from the supply chain** to reduce the impact on the environment.
 
-<h2>2.Green Supply Chain Model(SCM) </h2>
+<h2>2.Green Supply Chain Model </h2>
+
+### 2.1 Supply Chain Model(SCM):
 There are some important roles in a supply chian:
 
 1.Manufacturers  
@@ -21,7 +23,7 @@ There are some important roles in a supply chian:
 
 And these four roles will have the following five activities:
 
-1.Purchase raw materials from Manufacturer   
+1.Manufacturer purchase raw materials    
 2.Assemble products in Manufacturers  
 3.Transport products from Manufacturers to Warehouses  
 4.Transport products from Warehouses to Distribution centers  
@@ -34,10 +36,8 @@ We assume **3 Manufacturers,4 Warehouses,5 Distribution centers,16 Customers**,b
 
 
 
-Notations of SCM
-The notations of SCM are as following table
 
-### Sets:
+### 2.2 Sets:
 <table>
 <tr>
 <th>Set</th> <th>Description</th> 
@@ -71,11 +71,32 @@ The notations of SCM are as following table
 </tr>
 </table>
 
--------------------------
-### Notation:
-![messageImage_1642046021182](https://user-images.githubusercontent.com/51538779/149263199-1be752bc-9c1e-4607-9b0d-f3399d45041f.jpg)
+### 2.3 Notation: 
+* **Environmental impact function:**
+<table>
+<tr>
+<th>PN</th> <th>The amount of nitrogen oxide produced in supply chain (liter)</th> 
+</tr>
+<tr>
+<th>PC</th> <th>The amount of carbon monoxide produced in supply chain (liter)</th> 
+</tr>
+<tr>
+<th>PO</th> <th>The amount of volatile organic produced in supply chain (liter)</th> 
+</tr>
+</table>  
 
-### Parameter:
+
+* **Cost function:**
+<table>
+<tr><th>RC</th><th>Total cost of purchasing raw materials from suppliers</th></tr>
+<tr><th>FC</th><th>Fixed costs of opened facilities</th></tr>
+<tr><th>VC</th><th>Variable costs of opened facilities</th></tr>
+<tr><th>TC</th><th>Transportation costs</th></tr>
+<tr><th>HC</th><th>Holding inventory costs in warehouses and distribution centers</th></tr>
+<tr><th>BC</th><th>Backorder cost</th></tr> 
+</table>
+
+### 2.4 Parameter:
 <table>
  <tr><th>Parameter</th> <th>Description</th> </tr>
  <tr><th>dem<sub>c</sub> </th><th>demand of customer c with mean μc and standard deviation σc</th></tr>
@@ -103,7 +124,7 @@ The notations of SCM are as following table
  <tr><th>G<sup>f′</sup><sub>O</sub> </th><th>rate of released volatile organic per one unit of distance for transportation option f ′ ∈ {tm, tw, td}</th></tr>
  </table>
  
- ### Decision Variables:
+ ### 2.5 Decision Variables:
  <table>
   <tr><th>Decision Variables</th><th>Description</th></tr>
   <tr><th>x<sub>m</sub> </th><th>1 if manufacturer m is opened  / 0 otherwise</th></tr>
@@ -116,7 +137,7 @@ The notations of SCM are as following table
  <tr><th>x<sup>j</sup><sub>m</sub></th><th>quantity of raw material transported to manufacturer m from supplier that produce raw material type j</th></tr>
  </table>
 
- ### Objective function:
+ ### 2.6 Objective function:
  
 * **Objective function 1 --> Minimize cost:**
 
@@ -127,7 +148,7 @@ The notations of SCM are as following table
 ![2](https://user-images.githubusercontent.com/51538779/149276436-741e0180-dff0-423d-a26d-2e58a0c9fd0f.JPG)
 
 
- ### Constraints:
+ ### 2.7 Constraints:
 
 (12)–(14) determine the demand of each facility:  
 ![12](https://user-images.githubusercontent.com/51538779/149278103-8afbba16-fee2-4f5d-9084-893b1614977a.JPG)
@@ -162,12 +183,13 @@ The notations of SCM are as following table
 
 <h2>3. Methodology </h2>
 
-### ϵ-constrained method
+### 3.1 The ϵ-constrained method
 We minimize two objectives by setting one objectives to the constraint.
 ![圖片5](https://user-images.githubusercontent.com/51538779/149279369-435e33c6-e036-4840-9c98-78bf93665b2b.png)  
 ![擷取000](https://user-images.githubusercontent.com/51538779/149279772-43b65175-1c24-4260-b3ae-a749ba645bb0.JPG)
 
-This is a **nonlinear problem** because  subtitute (17)(18) into (15)(16). We call a module from Python,called **"Pyomo"**.  
+### 3.2 Pyomo
+Although the majority of our equations are linear, this is a **nonlinear problem** , subtitute (17)(18) into (15)(16). We call a module from Python,called **"Pyomo"**.  
 There is a solver **Ipopt**  can caculate continuous nonlinear problems.
 ![P](https://user-images.githubusercontent.com/51538779/149280809-0e37d5eb-edfd-4c01-a957-376020bc530c.JPG)
 
@@ -176,7 +198,7 @@ There is a solver **Ipopt**  can caculate continuous nonlinear problems.
 
 
 ### 4.1 Analyze the different nubmber of manufacturer and distribution center
-Both the nubmber of manufacturer and distribution center increase,the cost and pollution are also increased in SCM.  
+Both the number of manufacturer and distribution center increase,the cost and pollution are also increased in SCM.  
 However,the distribution center has many routes, when the number of distribution centers increases, the cost and pollution increase is larger than that of the manufacturer.
 ![AAA1111](https://user-images.githubusercontent.com/51538779/149289120-21d00f06-8ddb-4ccc-a9ae-bb9e332dacf2.JPG)
 
@@ -187,11 +209,11 @@ The following pictures show that transportation cost account for large proportio
 If the customer number grow ,more products could not deliverd to customer in time so that the backorder cost increase. 
 ![CCC](https://user-images.githubusercontent.com/51538779/149283068-6062660d-9672-4f6f-a503-cc8efca36d89.JPG)
 
-### 4.3 Analyze the different nubmber of customers
 
 <h2>5.Summary </h2>
 Manufacturers, warehouse and distribution centers increase, cost and pollution will rise. Each facility has a different rate of increase in cost and pollution.
 The company has to consider what their target is.  
+However,in reality, the cost and pollution functions may not be linear. This is the part that our model cannot explain. 
 
 <h2>6.Reference </h2>  
 
