@@ -127,7 +127,37 @@ The notations of SCM are as following table
 ![2](https://user-images.githubusercontent.com/51538779/149276436-741e0180-dff0-423d-a26d-2e58a0c9fd0f.JPG)
 
 
+ ## Constraints:
 
+(12)–(14) determine the demand of each facility:  
+![12](https://user-images.githubusercontent.com/51538779/149278103-8afbba16-fee2-4f5d-9084-893b1614977a.JPG)
+
+
+(15) and (16) also calculate the inventory level that each warehouse and distribution center must hold:  
+![15](https://user-images.githubusercontent.com/51538779/149278113-b75d1b00-3b49-4b21-b18f-90413f675095.JPG)
+
+
+(17)–(18) also show that the standard deviation of demand for warehouses and distribution centers is defined as the weighted average of the standard deviation of demands assigned to them:  
+![17](https://user-images.githubusercontent.com/51538779/149278123-303c3105-ebeb-4967-b0c0-1d0de0ff9a16.JPG)
+
+
+(19)–(21) ensure that we cannot assign a demand to a facility that is higher than its capacity:  
+![19](https://user-images.githubusercontent.com/51538779/149277379-b099d20a-faef-49e1-9b49-bd719e2c6bf0.JPG)
+
+(22)–(24) assure that if a facility does not supply any facility at its lower level, it will be closed and its binary variable is equal to zero:  
+![22](https://user-images.githubusercontent.com/51538779/149277514-8e2613e7-b83d-4809-9ed6-72da17b77e5c.JPG)
+
+(25) and (26) guarantee that the total raw material shipped from suppliers to a manufacturer can not be greater than the manufacturer demand, according to the required raw material for one product unit:  
+![25](https://user-images.githubusercontent.com/51538779/149277624-0b17ea65-a632-4a8f-8baa-9c5c84cce3de.JPG)
+
+(27)–(28) ensure that the amount of product transported from a manufacturer and a warehouse must be equal to warehouse and distribution center demand respectively:  
+![27](https://user-images.githubusercontent.com/51538779/149277831-cb22e368-8085-4e79-981b-54bdf18bbb42.JPG)
+
+(29) distribution centers are allowed to not serve the percentage or total demand of a customer:  
+![29](https://user-images.githubusercontent.com/51538779/149277896-eae91369-e110-4407-a757-794893801822.JPG)
+
+(30)–(32) are capacity constraints on transportation means, which prohibit assigning more than their capacity to the transportation means:  
+![30](https://user-images.githubusercontent.com/51538779/149277933-6709eedb-8b82-444e-86b0-c95de1d6ba14.JPG)
 
 
 
