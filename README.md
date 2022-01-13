@@ -193,12 +193,13 @@ If the customer number grow ,more products could not deliverd to customer in tim
 Manufacturers, warehouse and distribution centers increase, cost and pollution will rise. Each facility has a different rate of increase in cost and pollution.
 The company has to consider what their target is.  
 
-<h2>6.Reference </h2>
-<a href="https://www.sciencedirect.com/science/article/pii/S1026309812001496">Multi-objective green supply chain optimization with a new hybrid memetic algorithm using the Taguchi method</a> ,R. Jamshidi, S.M.T. Fatemi Ghomi,B. Karimi  
+<h2>6.Reference </h2>  
+
+* <a href="https://www.sciencedirect.com/science/article/pii/S1026309812001496">Multi-objective green supply chain optimization with a new hybrid memetic algorithm using the Taguchi method</a> ,R. Jamshidi, S.M.T. Fatemi Ghomi,B. Karimi  
   
   
-<a href="http://www.pyomo.org/">Pyomo</a>  
+* <a href="http://www.pyomo.org/">Pyomo</a>  
 
-<a href="https://github.com/PO-LAB/Operations-Research-Applications">Operations-Research-Applications github</a>, Dr. Chia-Yen Lee  
+* <a href="https://github.com/PO-LAB/Operations-Research-Applications">Operations-Research-Applications github</a>, Dr. Chia-Yen Lee  
 
-Handout of Operations Research Applications, ORA_08_MODA_2021_ncku, Dr. Chia-Yen Lee
+* Handout of Operations Research Applications, ORA_08_MODA_2021_ncku, Dr. Chia-Yen Lee
