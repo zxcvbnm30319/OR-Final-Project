@@ -160,6 +160,24 @@ The notations of SCM are as following table
 ![30](https://user-images.githubusercontent.com/51538779/149277933-6709eedb-8b82-444e-86b0-c95de1d6ba14.JPG)
 
 
+<h2>3. Methodology </h2>
+
+## ϵ-constrained method
+We minimize two objectives by setting one objectives to the constraint.
+![圖片5](https://user-images.githubusercontent.com/51538779/149279369-435e33c6-e036-4840-9c98-78bf93665b2b.png)  
+![擷取000](https://user-images.githubusercontent.com/51538779/149279772-43b65175-1c24-4260-b3ae-a749ba645bb0.JPG)
+
+This is a **nonlinear problem** because  subtitute (17)(18) into (15)(16). We call a package from Python,called **"Pyomo"**.  
+There is a solver **Ipopt**  can caculate continuous nonlinear problems.
+![P](https://user-images.githubusercontent.com/51538779/149280809-0e37d5eb-edfd-4c01-a957-376020bc530c.JPG)
+
+
+<h2>4.Analysis Result </h2>
+
+
+
+
+
 
 
 
