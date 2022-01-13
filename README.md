@@ -1,4 +1,4 @@
-# Multi-Objective Green Supply Chain Optimizat
+# Multi-Objective Green Supply Chain Optimization
 
 <h2>1. Background and Motivation </h2>
 
@@ -37,6 +37,7 @@ We assume **3 Manufacturers,4 Warehouses,5 Distribution centers,16 Customers**,b
 Notations of SCM
 The notations of SCM are as following table
 
+## Sets:
 <table>
 <tr>
 <th>Set</th> <th>Description</th> 
@@ -71,9 +72,10 @@ The notations of SCM are as following table
 </table>
 
 -------------------------
-
+## Notation:
 ![messageImage_1642046021182](https://user-images.githubusercontent.com/51538779/149263199-1be752bc-9c1e-4607-9b0d-f3399d45041f.jpg)
 
+## Parameter:
 <table>
  <tr><th>Parameter</th> <th>Description</th> </tr>
  <tr><th>dem<sub>c</sub> </th><th>demand of customer c with mean μc and standard deviation σc</th></tr>
@@ -99,6 +101,35 @@ The notations of SCM are as following table
  <tr><th>G<sup>f′</sup><sub>N</sub> </th><th>rate of released nitrogen oxide per one unit of distance for transportation option f ′ ∈ {tm, tw, td}</th></tr>
  <tr><th>G<sup>f′</sup><sub>C</sub> </th><th>rate of released carbon monoxide per one unit of distance for transportation option f ′ ∈ {tm, tw, td}</th></tr>
  <tr><th>G<sup>f′</sup><sub>O</sub> </th><th>rate of released volatile organic per one unit of distance for transportation option f ′ ∈ {tm, tw, td}</th></tr>
- 
  </table>
  
+ ## Decision Variables:
+ <table>
+  <tr><th>Decision Variables</th><th>Description</th></tr>
+  <tr><th>x<sub>m</sub> </th><th>1 if manufacturer m is opened  / 0 otherwise</th></tr>
+ <tr><th>x<sub>w</sub> </th><th>1 if warehouse w is opened  / 0 otherwise</th></tr>
+ <tr><th>x<sub>d</sub> </th><th>1 if distribution house d is opened  / 0 otherwise</th></tr>
+ <tr><th>x<sup>tm</sup><sub>mw</sub></th><th>quantity of products shipped from manufacturer m to warehouse w by transportation option tm</th></tr>
+ <tr><th>x<sup>tw</sup><sub>wd</sub></th><th>quantity of products shipped from warehouse w to distribution center d by transportation option tw</th></tr>
+  <tr><th>x<sup>td</sup><sub>dc</sub></th><th>quantity of products shipped from distribution center d tocustomer c by transportation option td</th></tr>
+ <tr><th>x<sup>i</sup><sub>m</sub></th><th>quantity of raw material transported to manufacturer m from supplier that produce raw material type i</th></tr>
+ <tr><th>x<sup>j</sup><sub>m</sub></th><th>quantity of raw material transported to manufacturer m from supplier that produce raw material type j</th></tr>
+ </table>
+
+ ## Objective function:
+ 
+* **Objective function 1 --> Minimize cost:**
+
+![1](https://user-images.githubusercontent.com/51538779/149276126-295e3e96-ffd7-4801-9895-254bb983b53d.JPG)
+
+* **Objective function 2 --> Minimize pollution:**
+
+![2](https://user-images.githubusercontent.com/51538779/149276436-741e0180-dff0-423d-a26d-2e58a0c9fd0f.JPG)
+
+
+
+
+
+
+
+
